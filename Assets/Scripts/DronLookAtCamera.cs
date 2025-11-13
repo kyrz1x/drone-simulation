@@ -8,7 +8,7 @@ public class DronLookAtCamera : MonoBehaviour
     {
         if (cameraPivot == null) return;
 
-        Vector3 lookDirection = cameraPivot.forward;
+        Vector3 lookDirection = -cameraPivot.forward;
         lookDirection.Normalize();
 
         // Rotación objetivo

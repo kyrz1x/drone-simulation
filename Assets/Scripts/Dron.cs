@@ -31,7 +31,7 @@ public class Dron : MonoBehaviour, InputSystem_Actions.IPlayerActions
 
 
         // Dirección final del movimiento
-        Vector3 moveDir = (camForward * _direction.z + camRight * _direction.x).normalized;
+        Vector3 moveDir = -(camForward * _direction.z + camRight * _direction.x).normalized;
         _rb.AddForce(moveDir * _movementSensibility * velocity, ForceMode.Acceleration);
     }
     public void OnMove(InputAction.CallbackContext context)

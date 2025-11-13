@@ -56,7 +56,7 @@ public class Camera : MonoBehaviour
         Vector3 direction = new Vector3(0, height, -distance);
         Vector3 desiredPosition = player.position + rotation * direction;
 
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * 10f);
-        transform.LookAt(player.position + Vector3.up * height / 2);
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * 5f);
+        transform.LookAt(player.position);
     }
 }
